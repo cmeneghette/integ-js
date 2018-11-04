@@ -3,11 +3,13 @@
  * and open the template in the editor.
  */
 
+/* global integJs */
+
 /**
- * Crbm é um conjunto de ferramentas desenvolvido com o objetivo de facilitar a
+ * IntegJS é um conjunto de ferramentas desenvolvido com o objetivo de facilitar a
  * implementação de aplicações em JavaScript radando no lado do navegador.
  * 
- * @module crbm
+ * @module integJs
  * @method getContext
  * @method init
  * @method run
@@ -15,7 +17,7 @@
 
 (function() {
 
-    this.Init = {
+    this.init = {
         initFunctions: [],
         add: function(initFunction) {
             if (typeof initFunction === 'function') {
@@ -31,8 +33,8 @@
     };
 
     window.addEventListener("load", function() {
-        up.Init.run();
+        integJs.init.run();
     }, false);
 
-}).apply(namespace('up'));
+}).apply(namespace('integJs'));
 
